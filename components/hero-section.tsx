@@ -123,7 +123,7 @@ export function HeroSection() {
               <motion.div className="absolute left-1/2 top-1/2 w-8 h-8 -ml-4 -mt-4">
                 <div className="relative w-full h-full">
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-violet-600 rounded-full blur opacity-75 animate-pulse" />
-                  <div className="relative w-full h-full bg-slate-900 rounded-full border 2 border-cyan-400 flex items-center justify-center">
+                  <div className="relative w-full h-full bg-slate-900 rounded-full border-2 border-cyan-400 flex items-center justify-center">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full" />
                   </div>
                 </div>

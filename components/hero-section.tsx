@@ -1,11 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
 export function HeroSection() {
-  return (
+  const router = useRouter();
+
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Animated background gradients */}
       <div className="absolute inset-0 -z-10">
@@ -64,9 +66,11 @@ export function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Button
-            size="lg"
-            className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white font-semibold h-12 px-8 rounded-lg group"
-          >
+  size="lg"
+  onClick={() => router.push('/workspace')}
+  className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white font-semibold h-12 px-8 rounded-lg group"
+>
+          
             Get Started
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>

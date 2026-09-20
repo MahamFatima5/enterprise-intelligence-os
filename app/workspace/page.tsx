@@ -42,6 +42,9 @@ export default function WorkspacePage() {
     try {
       const response = await fetch(`${API_URL}/upload`, {
         method: 'POST',
+        headers: {
+          'ngrok-skip-browser-warning': 'true',
+        },
         body: formData,
       });
 
@@ -76,6 +79,7 @@ export default function WorkspacePage() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'ngrok-skip-browser-warning': 'true',
         },
         body: JSON.stringify({
           question: question,
